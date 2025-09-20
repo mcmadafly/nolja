@@ -1,24 +1,24 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+import { Analytics } from '@vercel/analytics/nuxt';
 
-const color = computed(() => colorMode.value === 'dark' ? '#1b1718' : 'white')
+const colorMode = useColorMode();
+
+const color = computed(() => (colorMode.value === 'dark' ? '#1b1718' : 'white'));
 
 useHead({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color }
+    { key: 'theme-color', name: 'theme-color', content: color },
   ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
   htmlAttrs: {
-    lang: 'en'
-  }
-})
+    lang: 'en',
+  },
+});
 
-const title = 'Nuxt AI Chatbot template'
-const description = 'A full-featured, hackable Nuxt AI chatbot template made with Nuxt UI.'
+const title = 'Nuxt AI Chatbot template';
+const description = 'A full-featured, hackable Nuxt AI chatbot template made with Nuxt UI.';
 
 useSeoMeta({
   title,
@@ -27,11 +27,12 @@ useSeoMeta({
   ogDescription: description,
   ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/chat-light.png',
   twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/chat-light.png',
-  twitterCard: 'summary_large_image'
-})
+  twitterCard: 'summary_large_image',
+});
 </script>
 
 <template>
+  <Analytics />
   <UApp :toaster="{ position: 'top-right' }">
     <NuxtLoadingIndicator color="var(--ui-primary)" />
 
