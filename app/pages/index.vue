@@ -84,17 +84,19 @@ const quickChats = [
                 </div>
 
                 <UChatPrompt
+                    placeholder="What game are you playing today? Let's play!"
                     v-model="input"
                     :status="loading ? 'streaming' : 'ready'"
+                    :autofocus="false"
                     class="[view-transition-name:chat-prompt]"
                     variant="subtle"
                     @submit="onSubmit"
                 >
                     <UChatPromptSubmit color="neutral" />
 
-                    <template #footer>
+                    <!-- <template #footer>
                         <ModelSelect v-model="model" />
-                    </template>
+                    </template> -->
                 </UChatPrompt>
 
                 <div class="flex flex-wrap gap-2">
