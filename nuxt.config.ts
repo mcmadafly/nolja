@@ -1,55 +1,63 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxtjs/mdc',
-    'nuxt-auth-utils'
-  ],
+    modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/mdc', 'nuxt-auth-utils'],
 
-  devtools: {
-    enabled: true
-  },
+    devtools: {
+        enabled: true,
+    },
 
-  css: ['~/assets/css/main.css'],
+    css: ['~/assets/css/main.css'],
 
-  mdc: {
-    highlight: {
-      // noApiRoute: true
-      shikiEngine: 'javascript'
-    }
-  },
+    app: {
+        head: {
+            script: [
+                {
+                    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8833907708911160',
+                    async: true,
+                    defer: true,
+                    crossorigin: 'anonymous',
+                },
+            ],
+        },
+    },
 
-  experimental: {
-    viewTransition: true
-  },
+    mdc: {
+        highlight: {
+            // noApiRoute: true
+            shikiEngine: 'javascript',
+        },
+    },
 
-  compatibilityDate: '2024-07-11',
-
-  nitro: {
     experimental: {
-      openAPI: true
-    }
-  },
+        viewTransition: true,
+    },
 
-  vite: {
-    $server: {
-      build: {
-        rollupOptions: {
-          output: {
-            preserveModules: true
-          }
-        }
-      }
-    }
-  },
+    compatibilityDate: '2024-07-11',
 
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
-  }
-})
+    nitro: {
+        experimental: {
+            openAPI: true,
+        },
+    },
+
+    vite: {
+        $server: {
+            build: {
+                rollupOptions: {
+                    output: {
+                        preserveModules: true,
+                    },
+                },
+            },
+        },
+    },
+
+    eslint: {
+        config: {
+            stylistic: {
+                commaDangle: 'never',
+                braceStyle: '1tbs',
+            },
+        },
+    },
+});
