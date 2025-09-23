@@ -8,6 +8,7 @@
         "@ai-sdk/vue": "^2.0.40",
         "@iconify-json/logos": "^1.2.9",
         "@iconify-json/lucide": "^1.2.67",
+        "@iconify-json/noto": "^1.2.7",
         "@iconify-json/simple-icons": "^1.2.51",
         "@nuxt/ui": "^4.0.0-alpha.1",
         "@nuxtjs/mdc": "^0.17.4",
@@ -222,6 +223,8 @@
     "@iconify-json/logos": ["@iconify-json/logos@1.2.9", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-G6VCdFnwZcrT6Eveq3m43oJfLw/CX8plwFcE+2jgv3fiGB64pTmnU7Yd1MNZ/eA+/Re2iEDhuCfSNOWTHwwK8w=="],
 
     "@iconify-json/lucide": ["@iconify-json/lucide@1.2.68", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-lR5xNJdn2CT0iR7lM25G4SewBO4G2hbr3fTWOc3AE9BspflEcneh02E3l9TBaCU/JOHozTJevWLrxBGypD7Tng=="],
+
+    "@iconify-json/noto": ["@iconify-json/noto@1.2.7", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-2pNHliXnMLpnepNTZwR9hPBSl6GmhIfXPnudFCHY5v9pJhmA7LoVb/pFY0qLDY/k+3ikET8RXRf7XFxc/pHObA=="],
 
     "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.52", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-c41YOMzBhl3hp58WJLxT+Qq3UhBd8GZAMkbS8ddlCuIGLW0COGe2YSfOA2+poA8/bxLhUQODRNjAy3KhiAOtzA=="],
 

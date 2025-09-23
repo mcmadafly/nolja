@@ -33,6 +33,7 @@ useSeoMeta({
 </script>
 
 <template>
+    <NuxtLoadingIndicator color="var(--ui-primary)" />
     <Analytics />
     <UApp :toaster="{ position: 'top-right' }">
         <NuxtLoadingIndicator color="var(--ui-primary)" />

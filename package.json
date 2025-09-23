@@ -20,6 +20,7 @@
     "@ai-sdk/vue": "^2.0.40",
     "@iconify-json/logos": "^1.2.9",
     "@iconify-json/lucide": "^1.2.67",
+    "@iconify-json/noto": "^1.2.7",
     "@iconify-json/simple-icons": "^1.2.51",
     "@nuxt/ui": "^4.0.0-alpha.1",
     "@nuxtjs/mdc": "^0.17.4",

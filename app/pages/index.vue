@@ -24,24 +24,28 @@ function onSubmit() {
 
 const quickChats = [
     {
-        label: 'Why use Nuxt UI?',
-        icon: 'i-logos-nuxt-icon',
+        label: "What's the hottest new game?",
+        icon: 'noto:fire',
     },
     {
-        label: 'Help me create a Vue composable',
-        icon: 'i-logos-vue',
+        label: 'Recommend a game for me to play',
+        icon: 'noto:joystick',
     },
     {
-        label: 'Tell me more about UnJS',
-        icon: 'i-logos-unjs',
+        label: 'What are the latest gaming news?',
+        icon: 'noto:newspaper',
     },
     {
-        label: 'Why should I consider VueUse?',
-        icon: 'i-logos-vueuse',
+        label: 'Find me a gaming buddy',
+        icon: 'noto:people-holding-hands',
     },
     {
-        label: 'Tailwind CSS best practices',
-        icon: 'i-logos-tailwindcss-icon',
+        label: 'What are some upcoming game releases?',
+        icon: 'noto:calendar',
+    },
+    {
+        label: 'Suggest some fun multiplayer games',
+        icon: 'noto:video-game',
     },
 ];
 </script>
@@ -56,31 +60,39 @@ const quickChats = [
             <UContainer class="flex-1 flex flex-col justify-center gap-4 sm:gap-6 py-8">
                 <div class="flex flex-col items-center">
                     <!-- Animate ghost icon floating smoothly up and down -->
-                    <div class="flex justify-center items-center gap-2">
-                        <Motion
-                            :animate="{ y: [-4, 4] }"
-                            :transition="{
-                                repeat: Infinity,
-                                repeatType: 'reverse',
-                                duration: 2,
-                                ease: 'easeInOut',
-                            }"
-                        >
-                            <img
-                                src="/images/nolja-ghost.svg"
-                                alt="Nolja Ghost - Spooky"
-                                class="h-6 w-auto"
-                            />
-                        </Motion>
+                    <UPopover mode="hover" :content="{ side: 'top', sideOffset: 8 }">
+                        <div class="flex justify-center items-center gap-2">
+                            <Motion
+                                :animate="{ y: [-4, 4] }"
+                                :transition="{
+                                    repeat: Infinity,
+                                    repeatType: 'reverse',
+                                    duration: 2,
+                                    ease: 'easeInOut',
+                                }"
+                            >
+                                <img
+                                    src="/images/nolja-ghost.svg"
+                                    alt="Nolja Ghost - Spooky"
+                                    class="h-6 w-auto"
+                                />
+                            </Motion>
 
-                        <!-- Wordmark on the right -->
-                        <img
-                            src="/images/nolja-logo.svg"
-                            alt="Nolja Logo"
-                            class="h-10 w-auto fill-white"
-                            fill="#ffffff"
-                        />
-                    </div>
+                            <!-- Wordmark on the right -->
+                            <img
+                                src="/images/nolja-logo.svg"
+                                alt="Nolja Logo"
+                                class="h-10 w-auto fill-white"
+                                fill="#ffffff"
+                            />
+                            <!-- <UButton label="Open" color="neutral" variant="subtle" /> -->
+                        </div>
+                        <template #content>
+                            <div class="max-w-xs p-2 text-sm text-center">
+                                Nolja (놀자) means "let's play" in Korean.
+                            </div>
+                        </template>
+                    </UPopover>
                 </div>
 
                 <UChatPrompt
